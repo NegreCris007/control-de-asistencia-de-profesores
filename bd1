@@ -1,0 +1,26 @@
+-- Tabla de categorías
+CREATE TABLE categoria (
+    idcategoria INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    descripcion TEXT,
+    estado TINYINT(1) DEFAULT 1
+);
+
+-- Tabla de artículos
+CREATE TABLE articulo (
+    idarticulo INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    codigo VARCHAR(100),
+    descripcion TEXT,
+    marca VARCHAR(100),
+    modelo VARCHAR(100),
+    puerto VARCHAR(50),
+    generacion VARCHAR(50),
+    ram VARCHAR(50),
+    rom VARCHAR(50),
+    idcategoria INT,
+    fechacreada DATETIME,
+    idusuario INT,
+    estado TINYINT(1) DEFAULT 1,
+    FOREIGN KEY (idcategoria) REFERENCES categoria(idcategoria)
+);
