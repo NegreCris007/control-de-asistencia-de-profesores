@@ -20,7 +20,7 @@ require 'header.php';
         <div class="col-md-12">
       <div class="box">
 <div class="box-header with-border">
-  <h1 class="box-title">Departamento <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i>Agregar</button></h1>
+  <h1 class="box-title">Categorias <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i>Agregar</button></h1>
   <div class="box-tools pull-right">
     
   </div>
@@ -45,6 +45,8 @@ require 'header.php';
     </tfoot>   
   </table>
 </div>
+
+
 <div class="panel-body" style="height: 400px;" id="formularioregistros">
   <form action="" name="formulario" id="formulario" method="POST">
     <div class="form-group col-lg-6 col-md-6 col-xs-12">
@@ -63,6 +65,7 @@ require 'header.php';
     </div>
   </form>
 </div>
+
 <!--fin centro-->
       </div>
       </div>

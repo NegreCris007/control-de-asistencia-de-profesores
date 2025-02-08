@@ -38,7 +38,7 @@ $("#frmAcceso").on('submit', function(e) {
                 } else {
 
                     // Muestra una alerta utilizando Bootbox si la respuesta es "null"
-                    bootbox.alert("Usuario y/o Password incorrectos");
+                    bootbox.alert("Cedula y/o Password incorrectos");
 
                 }
 

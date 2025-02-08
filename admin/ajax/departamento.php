@@ -30,6 +30,12 @@ switch ($_GET["op"]) {
 		$rspta=$departamento->activar($iddepartamento);
 		echo $rspta ? "Datos activados correctamente" : "No se pudo activar los datos";
 		break;
+
+		case 'eliminar':
+			$rspta=$departamento->eliminar($iddepartamento);
+			echo $rspta ? "Departamento eliminado correctamente" : "No se pudo eliminar";
+			break;
+		
 	
 	case 'mostrar':
 		$rspta=$departamento->mostrar($iddepartamento);
@@ -42,8 +48,11 @@ switch ($_GET["op"]) {
 
 		while ($reg=$rspta->fetch_object()) {
 			$data[]=array(
-            "0"=>'<button class="btn btn-warning btn-xs" onclick="mostrar('.$reg->iddepartamento.')"><i class="fa fa-pencil"></i></button>'.' '.'<button class="btn btn-danger btn-xs" onclick="desactivar('.$reg->iddepartamento.')"><i class="fa fa-close"></i></button>',
-            "1"=>$reg->nombre,
+           // "0"=>'<button class="btn btn-warning btn-xs" onclick="mostrar('.$reg->iddepartamento.')"><i class="fa fa-pencil"></i></button>'.' '.'<button class="btn btn-danger btn-xs" onclick="desactivar('.$reg->iddepartamento.')"><i class="fa fa-close"></i></button>',
+           "0"=>'<button class="btn btn-warning btn-xs" onclick="mostrar('.$reg->iddepartamento.')"><i class="fa fa-pencil"></i></button>'.
+     ' '.'<button class="btn btn-danger btn-xs" onclick="eliminar('.$reg->iddepartamento.')"><i class="fa fa-trash"></i></button>',
+
+		   "1"=>$reg->nombre,
             "2"=>$reg->descripcion,
             "3"=>$reg->fechacreada
               );

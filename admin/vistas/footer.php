@@ -4,6 +4,12 @@
     </div>
 
   </footer>
+  <footer class="main-footer">
+  <div class="pull-right hidden-xs">
+    <b>Versión</b> 1.0
+  </div>
+  <strong>Copyright &copy; 2025 <a href="#">Alkosto</a>.</strong> Todos los derechos reservados.
+</footer>
 
 <!-- jQuery 3 -->
 

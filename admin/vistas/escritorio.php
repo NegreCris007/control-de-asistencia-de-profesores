@@ -28,77 +28,80 @@ if (!isset($_SESSION['nombre'])) {
   <!-- Sección principal del contenido -->
   <section class="content">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <!-- Caja principal -->
-          <div class="box">
-            <!-- Encabezado de la caja -->
-            <div class="box-header with-border text-center">
-              <h3 class="box-title">Panel de Control </h3> <!-- Título de la caja -->
-            </div>
-            <!-- Cuerpo de la caja -->
-            <div class="box-body">
-              <div class="row d-flex justify-content-center">
-                <!-- Tarjetas Modernas -->
-                <!-- Tarjeta para la lista de asistencias -->
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                  <div class="card border-0 shadow-lg rounded-lg overflow-hidden">
-                    <div class="card-img-top bg-gradient-primary text-white p-4 text-center">
-                      <i class="fa fa-list fa-4x"></i> <!-- Icono para la lista de asistencias -->
-                      <h4 class="mt-2"><strong>Lista de asistencias</strong></h4> <!-- Título de la tarjeta -->
-                    </div>
-                    <div class="card-body text-center">
-                      <p>Accede al módulo de lista de asistencias para ver y gestionar las entradas de asistencia de los empleados.</p> <!-- Descripción de la tarjeta -->
-                      <a href="<?php echo ($_SESSION['tipousuario'] == 'Administrador') ? 'asistencia.php' : 'asistenciau.php'; ?>" class="btn btn-primary">
-                        <i class="fa fa-arrow-right"></i> Acceder
-                      </a> <!-- Botón para acceder al módulo de asistencias -->
-                    </div>
-                  </div>
-                </div>
+   
 
-                <?php if ($_SESSION['tipousuario'] == 'Administrador') { ?>
-                <!-- Tarjeta para la gestión de empleados, visible solo para administradores -->
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                  <div class="card border-0 shadow-lg rounded-lg overflow-hidden">
-                    <div class="card-img-top bg-gradient-warning text-white p-4 text-center">
-                      <i class="fa fa-users fa-4x"></i> <!-- Icono para la gestión de empleados -->
-                      <h4 class="mt-2"><strong>Empleados</strong></h4> <!-- Título de la tarjeta -->
-                    </div>
-                    <div class="card-body text-center">
-                      <p>Total de empleados registrados: <?php echo $reg->nombre; ?></p> <!-- Muestra la cantidad de empleados registrados -->
-                      <p>Gestiona los datos de los empleados del sistema.</p> <!-- Descripción de la tarjeta -->
-                      <a href="usuario.php" class="btn btn-warning">
-                        <i class="fa fa-arrow-right"></i> Gestionar
-                      </a> <!-- Botón para gestionar empleados -->
-                    </div>
-                  </div>
-                </div>
-                <?php } ?>
+    <section class="content-header">
+          <h1>
+            Dashboard
+            <small>Control panel</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Dashboard</li>
+          </ol>
+        </section>
 
-                <!-- Tarjeta para los reportes de asistencias -->
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                  <div class="card border-0 shadow-lg rounded-lg overflow-hidden">
-                    <div class="card-img-top bg-gradient-info text-white p-4 text-center">
-                      <i class="fa fa-list fa-4x"></i> <!-- Icono para el reporte de asistencias -->
-                      <h4 class="mt-2"><strong>Reporte de asistencias</strong></h4> <!-- Título de la tarjeta -->
-                    </div>
-                    <div class="card-body text-center">
-                      <p>Genera y visualiza reportes detallados de asistencias.</p> <!-- Descripción de la tarjeta -->
-                      <a href="<?php echo ($_SESSION['tipousuario'] == 'Administrador') ? 'rptasistencia.php' : 'rptasistenciau.php'; ?>" class="btn btn-info">
-                        <i class="fa fa-arrow-right"></i> Ver Reporte
-                      </a> <!-- Botón para ver el reporte de asistencias -->
-                    </div>
-                  </div>
+        <!-- Main content -->
+        <section class="content">
+          <!-- Small boxes (Stat box) -->
+          <div class="row">
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-aqua">
+                <div class="inner">
+                  <h3>150</h3>
+                  <p>New Orders</p>
                 </div>
+                <div class="icon">
+                  <i class="ion ion-bag"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
               </div>
-            </div>
-            <!-- Fin del cuerpo de la caja -->
-          </div>
-          <!-- Fin de la caja -->
-        </div>
-        <!-- Fin de la columna completa -->
-      </div>
-      <!-- Fin de la fila -->
+            </div><!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-green">
+                <div class="inner">
+                  <h3>53<sup style="font-size: 20px">%</sup></h3>
+                  <p>Bounce Rate</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              </div>
+            </div><!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-yellow">
+                <div class="inner">
+                  <h3>44</h3>
+                  <p>User Registrations</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-person-add"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              </div>
+            </div><!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-red">
+                <div class="inner">
+                  <h3>65</h3>
+                  <p>Unique Visitors</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              </div>
+            </div><!-- ./col -->
+          </div><!-- /.row -->
+          <!-- Main row -->
+
+
+
     </div>
     <!-- Fin del contenedor fluido -->
   </section>

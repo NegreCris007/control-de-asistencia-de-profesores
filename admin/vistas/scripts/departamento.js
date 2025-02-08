@@ -47,7 +47,7 @@ function listar(){
 		buttons: [
                   'copyHtml5',
                   'excelHtml5',
-                  'csvHtml5',
+                  
                   'pdf'
 		],
 		"ajax":
@@ -112,6 +112,18 @@ function desactivar(iddepartamento){
 		}
 	})
 }
+
+function eliminar(iddepartamento) {
+    bootbox.confirm("¿Está seguro de eliminar este departamento?", function(result) {
+        if (result) {
+            $.post("../ajax/departamento.php?op=eliminar", { iddepartamento: iddepartamento }, function(e) {
+                bootbox.alert(e);
+                tabla.ajax.reload();
+            });
+        }
+    });
+}
+
 
 function activar(iddepartamento){
 	bootbox.confirm("¿Esta seguro de activar este dato?" , function(result){

@@ -15,7 +15,7 @@ if (strlen(session_id())<1)
   <link rel="stylesheet" href="../public/css/font-awesome.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../public/css/AdminLTE.min.css">
-  <link rel="stylesheet" href="../public/css/_all-skins.min.css">
+  <link rel="stylesheet" href="../public/css/_all-skins.css">
   <link rel="apple-touch-icon" href="../public/img/apple-touch-icon.png">
   <link rel="shortcut icon" href="../public/img/favicon.ico">
 
@@ -97,15 +97,45 @@ if (strlen(session_id())<1)
             </ul>
           </li>
          
+
           <li class="treeview">
             <a href="#">
-              <i class="fa fa-folder"></i><span>Departamento</span>
+              <i class="fa fa-folder"></i> <span>Logística</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="departamento.php"><i class="fa fa-circle-o"></i> Departamento</a></li>
+              <li><a href="articulo.php"><i class="fa fa-circle-o"></i> Articulo</a></li>
+              <li><a href="tipousuario.php"><i class="fa fa-circle-o"></i> Entrada</a></li>
+              <li><a href="departamento.php"><i class="fa fa-circle-o"></i> salida</a></li>
+            </ul>
+          </li>
+         
+
+          
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-folder"></i><span>Categoria</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="departamento.php"><i class="fa fa-circle-o"></i> Categoria</a></li>
+            </ul>
+          </li>
+
+
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-folder"></i><span>Tienda</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="departamento.php"><i class="fa fa-circle-o"></i> Tienda</a></li>
             </ul>
           </li>
 

@@ -52,6 +52,11 @@ public function regresaRolDepartamento($departamento){
 	$sql="SELECT nombre FROM departamento where iddepartamento='$departamento'";		
 	return ejecutarConsulta($sql);
 }
+public function eliminar($iddepartamento)
+{
+    $sql="DELETE FROM departamento WHERE iddepartamento='$iddepartamento'";
+    return ejecutarConsulta($sql);
+}
 
 
 
